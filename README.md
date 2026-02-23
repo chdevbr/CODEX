@@ -1,26 +1,74 @@
-# 📖 CODEX - Incentivando a Leitura de Forma Divertida
+# 📖 CODEX - Gamificando a Jornada da Leitura
 
-Bem-vindo ao repositório frontend do **Codex**. Este projeto utiliza HTML, CSS e JavaScript puros, estruturado 
-para ser executado através de Docker.
+O **Codex** é uma plataforma focada em incentivar o hábito da leitura em ambientes escolares através de desafios, conquistas e um sistema de ranking competitivo. Este repositório contém todo o ecossistema frontend do projeto.
 
-## 🚀 Como correr o projeto na sua máquina
+---
 
-Para garantir que o ambiente é igual para todos, utilizamos Docker.
+## 👥 Membros da Equipe e Responsabilidades
+Abaixo estão os talentos responsáveis por dar vida ao Codex, com os papéis redistribuídos para máxima eficiência:
 
-1. Clone o repositório:
-   `git clone https://github.com/chdevbr/CODEX.git`
-2. Entre na pasta do projeto:
-   `cd CODEX`
-3. Construa a imagem Docker:
-   `docker build -t codex-app .`
-4. Execute o contentor:
-   `docker run -d -p 8080:80 --name meu-codex codex-app`
+| Membro | Papel | Responsabilidades Principais |
+| :--- | :--- | :--- |
+| **Carlos Farias** | Tech Lead e PO | Liderança técnica, priorização do backlog, validação de entregas e aprovação de PRs. |
+| **Lucas Segundo** | Scrum Master | Organização das Sprints, acompanhamento de tarefas e remoção de impedimentos. |
+| **Cecília Victória** | UX/UI Designer | Identidade visual, design no Figma, escolha de cores e tipografia. |
+| **Emanoel Alessandro** | Analista de Sistemas | Documentação funcional, histórias de usuário e critérios de aceitação. |
+| **Boniek Araújo** | Desenvolvedor | Implementação das páginas, componentes e lógica JavaScript. |
+| **Breno Cruz** | Desenvolvedor | Desenvolvimento de funcionalidades de interface e suporte técnico. |
+| **Lucas Barreto** | Desenvolvedor | Implementação de componentes reutilizáveis e ajustes de interface. |
+| **Gabriel Gomes** | Desenvolvedor | Integração de páginas e organização estrutural do projeto. |
+| **Letícia Gomes** | QA (Quality Assurance) | Testes funcionais, validação de responsividade e checklist de qualidade. |
+| **Eloi de Lima** | QA (Quality Assurance) | Testes de usabilidade, busca de bugs e garantia do "Definition of Done". |
 
-Acesse `http://localhost:8080` no seu navegador.
+---
 
-## 🛠️ Fluxo de Trabalho (Pull Requests)
-- Ninguém faz commits diretamente na `main`.
-- Crie uma branch para a sua tarefa: `git checkout -b feature/nome-da-tarefa`
-- Faça o commit, envie para o GitHub e abra um **Pull Request**.
-- Indique o número da Issue que resolve (ex: `Closes #3`).
-- **Atenção:** Todos os PRs requerem a revisão e aprovação do Tech Lead (@chdevbr).
+## 🛠️ Stack Técnica e Estrutura
+O projeto utiliza tecnologias puras para máxima performance e padronização via Docker.
+
+* **Linguagens:** HTML5, CSS3 e JavaScript (ES6+).
+* **Ambiente:** Servidor Nginx isolado via Docker.
+* **Arquitetura de Pastas:**
+    * `/.github`: Configurações de automação e CODEOWNERS.
+    * `/assets`: Recursos visuais e mídias.
+    * `/css`: Folhas de estilo (Global e Componentes).
+    * `/js`: Lógica de interatividade e gamificação.
+    * `/pages`: Visualização das rotas internas do app.
+
+---
+
+## 📈 Gestão e Planejamento
+Utilizamos metodologias ágeis para garantir a entrega em 2 semanas.
+
+* **Quadro de Atividades:** Gerenciado via **Trello**.
+* **Protótipo:** Desenvolvido no **Figma**.
+
+### ⚠️ Mapeamento de Riscos
+| Risco | Impacto | Responsável | Plano de Contingência |
+| :--- | :--- | :--- | :--- |
+| Atraso na entrega | Alto | Scrum Master | Replanejamento da sprint. |
+| Falta de comunicação | Médio | PO (Carlos Farias) | Reuniões semanais (Syncs). |
+| Problemas técnicos | Alto | Tech Lead (Carlos Farias) | Suporte técnico imediato e revisão de código. |
+| Indisponibilidade de membro | Médio | Scrum Master | Redistribuição de tarefas entre os desenvolvedores. |
+
+---
+
+## ✅ Checklist de Qualidade (Definition of Done)
+Para que uma tarefa seja considerada "Pronta", ela deve cumprir os seguintes critérios:
+
+- [ ] Código revisado por outro membro.
+- [ ] Testes funcionais realizados.
+- [ ] Sem erros no console do navegador.
+- [ ] Funcionalidade validada pelo QA (Letícia ou Eloi).
+- [ ] Documentação atualizada.
+- [ ] Deploy (Docker) funcionando.
+
+---
+
+## 🚀 Como Executar o Projeto
+Certifique-se de ter o **Docker Desktop** instalado.
+
+1.  Clone o repositório: `git clone https://github.com/chdevbr/CODEX.git`
+2.  Entre na pasta: `cd codex`
+3.  Suba o ambiente: `docker build -t codex-app .`
+4.  Rode o container: `docker run -d -p 8080:80 --name meu-codex codex-app`
+5.  Acesse: `http://localhost:8080`

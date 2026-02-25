@@ -39,8 +39,8 @@ O projeto utiliza tecnologias puras para máxima performance e padronização vi
 ## 📈 Gestão e Planejamento
 Utilizamos metodologias ágeis para garantir a entrega em 2 semanas.
 
-* **Quadro de Atividades:** Gerenciado via **Trello**.
-* **Protótipo:** Desenvolvido no **Figma**.
+* **Quadro de Atividades:** Gerenciado via [Trello da Equipe CODEX](https://trello.com/invite/b/699ef7952f9943a9f39511e2/ATTI409aee3d7f04486af5bfda6972cf2472700E44DB/codex).
+* **Protótipo:** Desenvolvido no [Figma Oficial](https://www.figma.com/make/ygoYdoYVmqEq1JK2IccSho/Aplicativo-de-Incentivo-%C3%A0-Leitura?t=02OxOyB45PIyJDpr-20&fullscreen=1).
 
 ### ⚠️ Mapeamento de Riscos
 | Risco | Impacto | Responsável | Plano de Contingência |
@@ -72,3 +72,72 @@ Certifique-se de ter o **Docker Desktop** instalado.
 3.  Suba o ambiente: `docker build -t codex-app .`
 4.  Rode o container: `docker run -d -p 8080:80 --name meu-codex codex-app`
 5.  Acesse: `http://localhost:8080`
+
+*(Se você alterar algum arquivo HTML/CSS/JS, basta dar **F5 no navegador** para ver a mudança).*
+
+---
+
+## 💻 Fluxo de Trabalho (Git Flow)
+
+**⚠️ REGRA DE OURO: NINGUÉM FAZ COMMIT DIRETO NA BRANCH `main`.** A `main` está protegida. Todo código precisa passar pela aprovação do Tech Lead e ser testado pelos QAs.
+
+Sempre que um desenvolvedor (Boniek, Breno, Lucas ou Gabriel) for começar uma tarefa, deve seguir este ciclo:
+
+**1. Atualize sua máquina com a versão mais recente**
+```bash
+git checkout main
+git pull origin main
+```
+
+**2. Crie uma branch para a sua tarefa**
+```bash
+# Use o prefixo feat/ (nova funcionalidade) ou fix/ (correção de bug)
+git checkout -b feat/nome-da-sua-tarefa
+```
+
+**3. Programe e salve (Commit)**
+```bash
+git add .
+git commit -m "feat: adiciona barra de navegacao inferior"
+```
+
+**4. Envie para o GitHub**
+```bash
+git push -u origin feat/nome-da-sua-tarefa
+```
+
+**5. Abra o Pull Request (PR)**
+Vá até o GitHub, clique em "Compare & pull request".
+- Adicione o Carlos Farias como Reviewer.
+- Na descrição, escreva Closes #NumeroDaIssue para fechar a tarefa automaticamente.
+- Marque a Letícia ou o Eloi para QA.
+
+---
+
+## Comandos Úteis (Docker)
+```bash
+# Ver quais containers estão rodando
+docker ps
+
+# Parar o container do projeto (se a porta 8080 travar)
+docker stop meu-codex
+
+# Apagar o container (para rodar do zero)
+docker rm meu-codex
+
+# Criar uma Imagem (a "forma" ou a receita do projeto) / Empacota o projeto com o servidor.
+docker build -t codex-app .
+
+# Ligar o servidor e jogar a tela para o seu navegador no localhost:8080.
+docker run -d -p 8080:80 --name meu-codex codex-app
+```
+---
+
+## Errou na Branch do Git?
+```bash
+# Ver em qual branch você está agora
+git branch
+
+# Desfazer alterações que você ainda não deu commit
+git restore .
+```

@@ -12,7 +12,7 @@ Abaixo estão os talentos responsáveis por dar vida ao Codex, com os papéis re
 | **Carlos Farias** | Tech Lead e PO | Liderança técnica, priorização do backlog, validação de entregas e aprovação de PRs. |
 | **Lucas Segundo** | Scrum Master | Organização das Sprints, acompanhamento de tarefas e remoção de impedimentos. |
 | **Cecília Victória** | UX/UI Designer | Identidade visual, design no Figma, escolha de cores e tipografia. |
-| **Emanoel Alessandro** | Analista de Sistemas | Documentação funcional, histórias de usuário e critérios de aceitação. |
+| **Emanoel Alesandro** | Analista de Sistemas | Documentação funcional, histórias de usuário e critérios de aceitação. |
 | **Boniek Araújo** | Desenvolvedor | Implementação das páginas, componentes e lógica JavaScript. |
 | **Breno Cruz** | Desenvolvedor | Desenvolvimento de funcionalidades de interface e suporte técnico. |
 | **Lucas Barreto** | Desenvolvedor | Implementação de componentes reutilizáveis e ajustes de interface. |

@@ -1,0 +1,102 @@
+/* Cabeçalho específico dessa tela */
+.cabecalho-perfil {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.icone-livro {
+    background: white;
+    color: #8A2BE2;
+    font-size: 24px;
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+}
+
+.cabecalho-perfil h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.cabecalho-perfil p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 4px;
+}
+
+/* Cartões de Escolha */
+.cartao-opcao {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 16px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.cartao-opcao:hover {
+    transform: scale(1.02);
+}
+
+/* Ícones dos cartões */
+.icone-opcao {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+}
+.icone-opcao.rosa { background-color: #D946EF; color: white; }
+.icone-opcao.azul { background-color: #0EA5E9; color: white; }
+
+/* Textos dentro do cartão */
+.conteudo-opcao h2 {
+    color: #D946EF; /* Padrão rosa, depois ajustamos via JS se precisar */
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+.cartao-opcao:nth-child(3) .conteudo-opcao h2 { color: #0EA5E9; } /* Deixa o segundo azul */
+
+.conteudo-opcao p {
+    color: #555;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+/* Barrinha de Nível */
+.barra-nivel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    color: #888;
+}
+
+.preenchimento {
+    height: 4px;
+    width: 40px;
+    border-radius: 2px;
+}
+.rosa-bg { background-color: #D946EF; }
+.azul-bg { background-color: #0EA5E9; }
+
+/* Rodapé */
+.rodape-dica {
+    margin-top: 24px;
+    font-size: 12px;
+    opacity: 0.7;
+    text-align: center;
+}

@@ -1,15 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CODEX</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CODEX</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/global.css" />
-</head>
+  <body class="app-bg">
+    <div class="login-wrapper">
+      <div class="cabecalho">
+        <img src="" alt="Logo Codex" />
+        <h1>Codex</h1>
+        <p>Incentive a leitura de forma divertida</p>
+      </div>
 
-<body class="app-bg">
-  <button class="btn-primary">Entrar</button>
-  <button class="btn-google">Entrar com Google</button>
-</body>
+      <div class="card">
+        <div class="tabs">
+          <button
+            class="tab-btn active"
+            id="btn-entrar"
+            onclick="mostrarEntrar()"
+          >
+            Entrar
+          </button>
+          <button
+            class="tab-btn"
+            id="btn-cadastrar"
+            onclick="mostrarCadastrar()"
+          >
+            Cadastrar
+          </button>
+        </div>
+
+        <div id="form-entrar" class="form-panel active">
+          <div class="input-group">
+            <label>Email</label>
+            <div class="input-wrapper">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="seu@email.com" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Senha</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="••••••••" />
+            </div>
+          </div>
+
+          <button class="btn-primary">Entrar</button>
+
+          <div class="divider">ou continue com</div>
+
+          <button class="btn-google">
+            <i class="fa-brands fa-google"></i> Google
+          </button>
+
+        <p>Não tem conta? <a href="#" onclick="mostrarCadastrar()">Cadastre-se</a></p>
+        </div>
+
+        <div id="form-cadastrar" class="form-panel">
+          <div class="input-group">
+            <label>Usuário</label>
+            <div class="input-wrapper">
+              <i class="fa-regular fa-user"></i>
+              <input type="text" placeholder="Seu usuário" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <div class="input-wrapper">
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="seu@email.com" />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label>Senha</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="••••••••" />
+            </div>
+          </div>
+
+          <button class="btn-primary">Criar Conta</button>
+
+          <div class="divider">ou continue com</div>
+
+          <button class="btn-google">
+            <i class="fa-brands fa-google"></i> Google
+          </button>
+
+          <p><a href="#" onclick="mostrarEntrar()">Já tenho conta</a></p>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>

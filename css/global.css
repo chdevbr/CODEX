@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-purple: #7c3aed;
+  --secondary-blue: #2563eb;
+
+  --bg-gradient: linear-gradient(
+    135deg,
+    var(--primary-purple) 0%,
+    var(--secondary-blue) 100%
+  );
+
+  --font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  --white: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+
+  --radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-bg {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem 1rem;
+  border: 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+
+  background: var(--primary-purple);
+  color: var(--white);
+
+  font-weight: 600;
+  font-family: var(--font-family);
+
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.btn-primary:hover { opacity: 0.92; }
+.btn-primary:active { transform: scale(0.98); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.btn-google {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+
+  background: var(--white);
+  color: #111827;
+  border: 1px solid #e5e7eb;
+
+  font-weight: 600;
+  font-family: var(--font-family);
+
+  transition: transform 120ms ease, background 120ms ease;
+}
+
+.btn-google:hover { background: #f9fafb; }
+.btn-google:active { transform: scale(0.98); }
+.btn-google:disabled { opacity: 0.6; cursor: not-allowed; }

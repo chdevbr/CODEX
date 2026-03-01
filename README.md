@@ -65,15 +65,39 @@ Para que uma tarefa seja considerada "Pronta", ela deve cumprir os seguintes cri
 ---
 
 ## 🚀 Como Executar o Projeto
-Certifique-se de ter o **Docker Desktop** instalado.
 
-1.  Clone o repositório: `git clone https://github.com/chdevbr/CODEX.git`
-2.  Entre na pasta: `cd codex`
-3.  Suba o ambiente: `docker build -t codex-app .`
-4.  Rode o container: `docker run -d -p 8080:80 --name meu-codex codex-app`
-5.  Acesse: `http://localhost:8080`
+Certifique-se de ter o Docker instalado na sua máquina.
 
-*(Se você alterar algum arquivo HTML/CSS/JS, basta dar **F5 no navegador** para ver a mudança).*
+### 1️⃣ Clone o repositório
+```bash
+git clone https://github.com/chdevbr/CODEX.git
+```
+### 2️⃣ Entre na pasta do projeto
+```
+cd CODEX
+```
+
+### 3️⃣ Suba o ambiente com Docker Compose
+```
+docker compose up --build -d
+```
+
+### 4️⃣ Acesse no navegador
+```
+http://localhost:8080
+```
+
+### 🔄 Sempre que atualizar o projeto (git pull)
+```
+git fetch
+git pull
+docker compose up --build -d
+```
+
+### 🛑 Para parar o projeto
+```
+docker compose down
+```
 
 ---
 
@@ -116,20 +140,17 @@ Vá até o GitHub, clique em "Compare & pull request".
 
 ## Comandos Úteis (Docker)
 ```bash
-# Ver quais containers estão rodando
-docker ps
+# Subir o ambiente
+docker compose up --build -d
 
-# Parar o container do projeto (se a porta 8080 travar)
-docker stop meu-codex
+# Ver containers rodando
+docker compose ps
 
-# Apagar o container (para rodar do zero)
-docker rm meu-codex
+# Parar o ambiente
+docker compose down
 
-# Criar uma Imagem (a "forma" ou a receita do projeto) / Empacota o projeto com o servidor.
-docker build -t codex-app .
-
-# Ligar o servidor e jogar a tela para o seu navegador no localhost:8080.
-docker run -d -p 8080:80 --name meu-codex codex-app
+# Ver logs (caso algo dê erro)
+docker compose logs -f
 ```
 ---
 

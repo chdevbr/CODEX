@@ -101,16 +101,22 @@ docker compose down
 
 ---
 
-## 💻 Fluxo de Trabalho (Git Flow)
+## 💻 Fluxo de Trabalho (Git Flow Tradicional)
 
-**⚠️ REGRA DE OURO: NINGUÉM FAZ COMMIT DIRETO NA BRANCH `main`.** A `main` está protegida. Todo código precisa passar pela aprovação do Tech Lead e ser testado pelos QAs.
+**⚠️ REGRA DE OURO: NINGUÉM FAZ COMMIT DIRETO NA BRANCH `main` ou `develop`.**
 
-Sempre que um desenvolvedor (Boniek, Breno, Lucas ou Gabriel) for começar uma tarefa, deve seguir este ciclo:
+Estrutura oficial do projeto:
+- `main` → Produção (versão estável)
+- `develop` → Integração do time
+- `feat/*` → Novas funcionalidades
+- `fix/*` → Correções de bugs
 
-**1. Atualize sua máquina com a versão mais recente**
+Sempre que um desenvolvedor for começar uma tarefa, deve seguir este ciclo:
+
+**1. Atualize sua base com a develop**
 ```bash
-git checkout main
-git pull origin main
+git checkout develop
+git pull origin develop
 ```
 
 **2. Crie uma branch para a sua tarefa**
@@ -122,7 +128,7 @@ git checkout -b feat/nome-da-sua-tarefa
 **3. Programe e salve (Commit)**
 ```bash
 git add .
-git commit -m "feat: adiciona barra de navegacao inferior"
+git commit -m "feat: descrição clara da funcionalidade"
 ```
 
 **4. Envie para o GitHub**
@@ -132,9 +138,19 @@ git push -u origin feat/nome-da-sua-tarefa
 
 **5. Abra o Pull Request (PR)**
 Vá até o GitHub, clique em "Compare & pull request".
+- Base: `develop`
+- Compare: `feat/...`
 - Adicione o Carlos Farias como Reviewer.
-- Na descrição, escreva Closes #NumeroDaIssue para fechar a tarefa automaticamente.
-- Marque a Letícia ou o Eloi para QA.
+- Na descrição, escreva Closes #NumeroDaIssue.
+
+---
+
+### 🚀 Fechamento de Sprint
+
+Quando todas as features estiverem testadas e aprovadas:
+
+1. O Tech Lead cria um PR de `develop` → `main`.
+2. Após aprovação, é feito o merge na `main`.
 
 ---
 

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Codex • Conectando</title>
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/conectando.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="app-bg">
+    <main class="cx-wrap">
+      <header class="cx-header">
+        <div class="cx-check" aria-label="Sucesso">
+          <i class="fa-solid fa-check"></i>
+        </div>
+
+        <h1 class="cx-title">Conectado!</h1>
+        <p class="cx-subtitle">
+          Tudo pronto para começar sua jornada de leitura.
+        </p>
+      </header>
+
+      <section class="card cx-card">
+        <h2 class="cx-card-title">Progresso</h2>
+
+        <ul class="cx-steps">
+          <li class="cx-step is-done" id="s1">
+            <span class="cx-step-ico">
+              <i class="fa-solid fa-check"></i>
+            </span>
+            <div class="cx-step-txt">
+              <p class="cx-step-title">Conectando à biblioteca</p>
+              <p class="cx-step-desc">Acesso liberado com sucesso</p>
+            </div>
+          </li>
+
+          <li class="cx-step is-loading" id="s2">
+            <span class="cx-step-ico">
+              <span class="cx-spinner" aria-hidden="true"></span>
+            </span>
+            <div class="cx-step-txt">
+              <p class="cx-step-title">Carregando catálogo</p>
+              <p class="cx-step-desc">Sincronizando livros disponíveis</p>
+            </div>
+          </li>
+
+          <li class="cx-step is-idle" id="s3">
+            <span class="cx-step-ico">
+              <i class="fa-regular fa-clock"></i>
+            </span>
+            <div class="cx-step-txt">
+              <p class="cx-step-title">Preparando desafios</p>
+              <p class="cx-step-desc">Montando metas e recompensas</p>
+            </div>
+          </li>
+
+          <li class="cx-step is-idle" id="s4">
+            <span class="cx-step-ico">
+              <i class="fa-regular fa-circle"></i>
+            </span>
+            <div class="cx-step-txt">
+              <p class="cx-step-title">Finalizando</p>
+              <p class="cx-step-desc">Quase tudo pronto…</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="cx-footer">
+        <button
+          class="btn-primary cx-btn"
+          id="btnComecar"
+          type="button"
+          disabled
+        >
+          Começar
+        </button>
+        <p class="cx-hint">Você será direcionado para a tela inicial.</p>
+      </footer>
+    </main>
+
+    <script src="../js/conectando.js"></script>
+  </body>
+</html>

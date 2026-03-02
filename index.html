@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CODEX</title>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -43,7 +44,11 @@
             <label>Email</label>
             <div class="input-wrapper">
               <i class="fa-regular fa-envelope"></i>
-              <input type="email" placeholder="seu@email.com" />
+              <input
+                id="login-email"
+                type="email"
+                placeholder="seu@email.com"
+              />
             </div>
           </div>
 
@@ -51,19 +56,24 @@
             <label>Senha</label>
             <div class="input-wrapper">
               <i class="fa-solid fa-lock"></i>
-              <input type="password" placeholder="••••••••" />
+              <input id="login-senha" type="password" placeholder="••••••••" />
             </div>
           </div>
 
-          <button class="btn-primary">Entrar</button>
+          <button id="btn-login" class="btn-primary" type="button">
+            Entrar
+          </button>
 
           <div class="divider">ou continue com</div>
 
-          <button class="btn-google">
+          <button class="btn-google" type="button">
             <i class="fa-brands fa-google"></i> Google
           </button>
 
-        <p>Não tem conta? <a href="#" onclick="mostrarCadastrar()">Cadastre-se</a></p>
+          <p>
+            Não tem conta?
+            <a href="#" onclick="mostrarCadastrar()">Cadastre-se</a>
+          </p>
         </div>
 
         <div id="form-cadastrar" class="form-panel">
@@ -71,7 +81,7 @@
             <label>Usuário</label>
             <div class="input-wrapper">
               <i class="fa-regular fa-user"></i>
-              <input type="text" placeholder="Seu usuário" />
+              <input id="cad-usuario" type="text" placeholder="Seu usuário" />
             </div>
           </div>
 
@@ -79,7 +89,7 @@
             <label>Email</label>
             <div class="input-wrapper">
               <i class="fa-regular fa-envelope"></i>
-              <input type="email" placeholder="seu@email.com" />
+              <input id="cad-email" type="email" placeholder="seu@email.com" />
             </div>
           </div>
 
@@ -87,20 +97,21 @@
             <label>Senha</label>
             <div class="input-wrapper">
               <i class="fa-solid fa-lock"></i>
-              <input type="password" placeholder="••••••••" />
+              <input id="cad-senha" type="password" placeholder="••••••••" />
             </div>
           </div>
 
-          <button class="btn-primary">Criar Conta</button>
+          <button id="btn-cadastrar-conta" class="btn-primary" type="button">
+            Criar Conta
+          </button>
 
           <div class="divider">ou continue com</div>
 
-          <button class="btn-google">
+          <button class="btn-google" type="button">
             <i class="fa-brands fa-google"></i> Google
           </button>
 
           <p><a href="#" onclick="mostrarEntrar()">Já tenho conta</a></p>
-
         </div>
       </div>
     </div>

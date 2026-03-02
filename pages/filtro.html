@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Codex • Filtro</title>
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/filtro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body class="app-bg">
+    <main class="fx-wrap">
+      <section class="fx-step active" data-step="1">
+        <div class="fx-icon"><i class="fa-regular fa-bookmark"></i></div>
+
+        <h1 class="fx-title">Bem-vindo ao Codex</h1>
+        <p class="fx-subtitle">Escolha seu perfil de leitura</p>
+
+        <div
+          class="fx-cardPick"
+          role="button"
+          tabindex="0"
+          data-profile="iniciante"
+        >
+          <div class="fx-cardIcon pink">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <div>
+            <h3>Aprendendo a Ler</h3>
+            <p>
+              Estou começando minha jornada de leitura. Quero aprender e me
+              divertir com histórias simples e animadas!
+            </p>
+            <div class="fx-meter">
+              <span style="width: 35%"></span><small>Iniciante</small>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="fx-cardPick"
+          role="button"
+          tabindex="0"
+          data-profile="avancado"
+        >
+          <div class="fx-cardIcon blue">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <h3>Quero Ler Mais</h3>
+            <p>
+              Já sei ler e quero explorar novos livros, histórias incríveis e
+              desafios de leitura mais avançados!
+            </p>
+            <div class="fx-meter">
+              <span style="width: 70%"></span><small>Avançado</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="fx-dots">
+          <span class="on"></span><span></span><span></span>
+        </div>
+      </section>
+
+      <section class="fx-step" data-step="2">
+        <div class="fx-center">
+          <div class="fx-icon"><i class="fa-regular fa-user"></i></div>
+
+          <h1 class="fx-title" id="fxHello">Olá!</h1>
+          <p class="fx-subtitle">
+            Queremos saber mais sobre você para personalizar sua experiência
+          </p>
+
+          <div class="card fx-formCard">
+            <label class="fx-label">Idade</label>
+            <div class="fx-input">
+              <i class="fa-regular fa-calendar"></i>
+              <input
+                id="fxIdade"
+                type="number"
+                min="1"
+                placeholder="Quantos anos você tem?"
+              />
+            </div>
+
+            <label class="fx-label">Escola onde estuda</label>
+            <div class="fx-input">
+              <i class="fa-solid fa-school"></i>
+              <input
+                id="fxEscola"
+                type="text"
+                placeholder="Digite o nome da sua escola"
+              />
+            </div>
+
+            <label class="fx-check">
+              <input id="fxNaoEstudo" type="checkbox" />
+              Não estudo mais
+            </label>
+
+            <div class="fx-info" id="fxInfo" hidden>
+              <i class="fa-solid fa-check"></i>
+              <div>
+                <strong
+                  >Ótimo! Você poderá acessar a biblioteca da sua escola</strong
+                >
+                <p>Vamos conectar você aos livros físicos disponíveis</p>
+              </div>
+            </div>
+
+            <button class="btn-primary fx-btn" id="fxContinuar2" type="button">
+              Continuar
+            </button>
+
+            <small class="fx-stepText">Etapa 2 de 3</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="fx-step" data-step="3">
+        <div class="card fx-finalCard">
+          <h2 class="fx-finalTitle">O que você encontrará no Codex</h2>
+
+          <div class="fx-feature">
+            <div class="fx-featureIcon">
+              <i class="fa-regular fa-circle-play"></i>
+            </div>
+            <div>
+              <h3>Vídeos Animados</h3>
+              <p>Histórias contadas de forma divertida e interativa</p>
+            </div>
+          </div>
+
+          <div class="fx-feature">
+            <div class="fx-featureIcon"><i class="fa-solid fa-trophy"></i></div>
+            <div>
+              <h3>Conquistas e Badges</h3>
+              <p>Ganhe prêmios conforme lê mais</p>
+            </div>
+          </div>
+
+          <div class="fx-feature">
+            <div class="fx-featureIcon"><i class="fa-solid fa-bolt"></i></div>
+            <div>
+              <h3>Desafios Diários</h3>
+              <p>Mantenha sua sequência de leitura ativa</p>
+            </div>
+          </div>
+
+          <hr class="fx-hr" />
+
+          <p class="fx-startWith">Você começará com</p>
+
+          <div class="fx-stats">
+            <div class="fx-stat"><strong>0</strong><span>Pontos</span></div>
+            <div class="fx-stat"><strong>1</strong><span>Nível</span></div>
+            <div class="fx-stat"><strong>0</strong><span>Badges</span></div>
+          </div>
+
+          <button class="btn-primary fx-btnBig" id="fxComecar" type="button">
+            Começar Minha Jornada! 🎉
+          </button>
+
+          <p class="fx-tip">
+            💡 Dica: Complete vídeos e quizzes para ganhar pontos e subir de
+            nível
+          </p>
+
+          <div class="fx-dots">
+            <span></span><span></span><span class="on"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/filtro.js"></script>
+  </body>
+</html>

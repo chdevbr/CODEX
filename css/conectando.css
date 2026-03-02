@@ -1,0 +1,175 @@
+.cx-wrap {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px 16px 120px;
+  gap: 14px;
+}
+
+.cx-header {
+  text-align: center;
+  color: var(--white);
+  max-width: 420px;
+}
+
+.cx-check {
+  width: 74px;
+  height: 74px;
+  margin: 0 auto 12px;
+
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.06)
+    ),
+    linear-gradient(135deg, rgba(124, 58, 237, 0.35), rgba(37, 99, 235, 0.35));
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.cx-check i {
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.cx-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  margin-bottom: 6px;
+}
+
+.cx-subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.cx-card {
+  width: min(420px, 100%);
+  padding: 18px 16px;
+}
+
+.cx-card-title {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.cx-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cx-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 12px 12px;
+  border-radius: 14px;
+
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.cx-step-ico {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  flex: 0 0 auto;
+}
+
+.cx-step-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cx-step-desc {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.cx-step.is-done .cx-step-ico {
+  border-color: rgba(16, 185, 129, 0.25);
+  background: rgba(16, 185, 129, 0.1);
+}
+.cx-step.is-done i {
+  color: #10b981;
+}
+
+.cx-step.is-loading .cx-step-ico {
+  border-color: rgba(37, 99, 235, 0.25);
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.cx-step.is-idle .cx-step-ico i {
+  color: rgba(15, 23, 42, 0.45);
+}
+
+.cx-spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 2px solid rgba(15, 23, 42, 0.18);
+  border-top-color: var(--secondary-blue);
+  animation: cxspin 0.9s linear infinite;
+}
+
+@keyframes cxspin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cx-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 14px 16px 18px;
+  display: grid;
+  place-items: center;
+
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.35),
+    rgba(15, 23, 42, 0)
+  );
+  backdrop-filter: blur(10px);
+}
+
+.cx-btn {
+  width: min(420px, 100%);
+  background: var(--bg-gradient);
+}
+
+.cx-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0.8;
+  text-align: center;
+}

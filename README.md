@@ -12,7 +12,7 @@ Abaixo estão os talentos responsáveis por dar vida ao Codex, com os papéis re
 | **Carlos Farias** | Tech Lead e PO | Liderança técnica, priorização do backlog, validação de entregas e aprovação de PRs. |
 | **Lucas Segundo** | Scrum Master | Organização das Sprints, acompanhamento de tarefas e remoção de impedimentos. |
 | **Cecília Victória** | UX/UI Designer | Identidade visual, design no Figma, escolha de cores e tipografia. |
-| **Emanoel Alessandro** | Analista de Sistemas | Documentação funcional, histórias de usuário e critérios de aceitação. |
+| **Emanoel Alesandro** | Analista de Sistemas | Documentação funcional, histórias de usuário e critérios de aceitação. |
 | **Boniek Araújo** | Desenvolvedor | Implementação das páginas, componentes e lógica JavaScript. |
 | **Breno Cruz** | Desenvolvedor | Desenvolvimento de funcionalidades de interface e suporte técnico. |
 | **Lucas Barreto** | Desenvolvedor | Implementação de componentes reutilizáveis e ajustes de interface. |
@@ -65,28 +65,58 @@ Para que uma tarefa seja considerada "Pronta", ela deve cumprir os seguintes cri
 ---
 
 ## 🚀 Como Executar o Projeto
-Certifique-se de ter o **Docker Desktop** instalado.
 
-1.  Clone o repositório: `git clone https://github.com/chdevbr/CODEX.git`
-2.  Entre na pasta: `cd codex`
-3.  Suba o ambiente: `docker build -t codex-app .`
-4.  Rode o container: `docker run -d -p 8080:80 --name meu-codex codex-app`
-5.  Acesse: `http://localhost:8080`
+Certifique-se de ter o Docker instalado na sua máquina.
 
-*(Se você alterar algum arquivo HTML/CSS/JS, basta dar **F5 no navegador** para ver a mudança).*
+### 1️⃣ Clone o repositório
+```bash
+git clone https://github.com/chdevbr/CODEX.git
+```
+### 2️⃣ Entre na pasta do projeto
+```
+cd CODEX
+```
+
+### 3️⃣ Suba o ambiente com Docker Compose
+```
+docker compose up --build -d
+```
+
+### 4️⃣ Acesse no navegador
+```
+http://localhost:8080
+```
+
+### 🔄 Sempre que atualizar o projeto (git pull)
+```
+git fetch
+git pull
+docker compose up --build -d
+```
+
+### 🛑 Para parar o projeto
+```
+docker compose down
+```
 
 ---
 
-## 💻 Fluxo de Trabalho (Git Flow)
+## 💻 Fluxo de Trabalho (Git Flow Tradicional)
 
-**⚠️ REGRA DE OURO: NINGUÉM FAZ COMMIT DIRETO NA BRANCH `main`.** A `main` está protegida. Todo código precisa passar pela aprovação do Tech Lead e ser testado pelos QAs.
+**⚠️ REGRA DE OURO: NINGUÉM FAZ COMMIT DIRETO NA BRANCH `main` ou `develop`.**
 
-Sempre que um desenvolvedor (Boniek, Breno, Lucas ou Gabriel) for começar uma tarefa, deve seguir este ciclo:
+Estrutura oficial do projeto:
+- `main` → Produção (versão estável)
+- `develop` → Integração do time
+- `feat/*` → Novas funcionalidades
+- `fix/*` → Correções de bugs
 
-**1. Atualize sua máquina com a versão mais recente**
+Sempre que um desenvolvedor for começar uma tarefa, deve seguir este ciclo:
+
+**1. Atualize sua base com a develop**
 ```bash
-git checkout main
-git pull origin main
+git checkout develop
+git pull origin develop
 ```
 
 **2. Crie uma branch para a sua tarefa**
@@ -98,7 +128,7 @@ git checkout -b feat/nome-da-sua-tarefa
 **3. Programe e salve (Commit)**
 ```bash
 git add .
-git commit -m "feat: adiciona barra de navegacao inferior"
+git commit -m "feat: descrição clara da funcionalidade"
 ```
 
 **4. Envie para o GitHub**
@@ -108,28 +138,35 @@ git push -u origin feat/nome-da-sua-tarefa
 
 **5. Abra o Pull Request (PR)**
 Vá até o GitHub, clique em "Compare & pull request".
+- Base: `develop`
+- Compare: `feat/...`
 - Adicione o Carlos Farias como Reviewer.
-- Na descrição, escreva Closes #NumeroDaIssue para fechar a tarefa automaticamente.
-- Marque a Letícia ou o Eloi para QA.
+- Na descrição, escreva Closes #NumeroDaIssue.
+
+---
+
+### 🚀 Fechamento de Sprint
+
+Quando todas as features estiverem testadas e aprovadas:
+
+1. O Tech Lead cria um PR de `develop` → `main`.
+2. Após aprovação, é feito o merge na `main`.
 
 ---
 
 ## Comandos Úteis (Docker)
 ```bash
-# Ver quais containers estão rodando
-docker ps
+# Subir o ambiente
+docker compose up --build -d
 
-# Parar o container do projeto (se a porta 8080 travar)
-docker stop meu-codex
+# Ver containers rodando
+docker compose ps
 
-# Apagar o container (para rodar do zero)
-docker rm meu-codex
+# Parar o ambiente
+docker compose down
 
-# Criar uma Imagem (a "forma" ou a receita do projeto) / Empacota o projeto com o servidor.
-docker build -t codex-app .
-
-# Ligar o servidor e jogar a tela para o seu navegador no localhost:8080.
-docker run -d -p 8080:80 --name meu-codex codex-app
+# Ver logs (caso algo dê erro)
+docker compose logs -f
 ```
 ---
 

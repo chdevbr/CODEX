@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CODEX - Início</title>
+    <title>CODEX - Vídeos</title>
 
     <link rel="stylesheet" href="../css/global.css" />
-    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/videos.css" />
   </head>
 
-  <body class="home-page">
+  <body class="videos-page">
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
       <symbol id="icon-book" viewBox="0 0 24 24" fill="none">
         <path
@@ -183,169 +183,74 @@
         />
       </symbol>
 
-      <symbol id="icon-fire" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M13.5 3s.5 2.5-1.5 4.5c-1.2 1.2-2.5 2-2.5 4.2A4.5 4.5 0 0 0 14 16.2c0-2-1.1-2.9-1.1-4.4 0-1.2.7-1.8 1.5-2.7 1.1-1.3 1.6-3.1 1.1-6.1 2.5 1.8 4 4.8 4 7.9A7.5 7.5 0 1 1 4.5 12c0-2.6 1.1-4.6 3.3-6.7 0 1.7.6 3 1.6 4 .3-2.6 2.2-4.3 4.1-6.3Z"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linejoin="round"
-        />
-      </symbol>
-
       <symbol id="icon-play" viewBox="0 0 24 24" fill="none">
         <path d="M9 7.5v9l7-4.5-7-4.5Z" fill="currentColor" />
       </symbol>
 
-      <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none">
+      <symbol id="icon-search" viewBox="0 0 24 24" fill="none">
+        <circle
+          cx="11"
+          cy="11"
+          r="6"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
         <path
-          d="M5 12h14"
+          d="m20 20-4.35-4.35"
           stroke="currentColor"
           stroke-width="1.8"
           stroke-linecap="round"
-        />
-        <path
-          d="m13 7 5 5-5 5"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </symbol>
-
-      <symbol id="icon-library" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M4 20h16"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-        />
-        <path
-          d="M6 18V8h3v10M11 18V5h3v13M16 18v-8h3v8"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linejoin="round"
         />
       </symbol>
     </svg>
 
-    <header class="home-header">
-      <div class="home-brand">
-        <span class="icon icon--brand">
-          <svg><use href="#icon-book"></use></svg>
-        </span>
-        <span class="home-brand__text">Codex</span>
-      </div>
-
-      <div class="home-header__status">
-        <span class="status-pill">
-          <span class="icon icon--xs">
-            <svg><use href="#icon-trophy"></use></svg>
+    <header class="app-header">
+      <div class="app-header__inner">
+        <div class="app-brand">
+          <span class="icon icon--brand">
+            <svg><use href="#icon-book"></use></svg>
           </span>
-          <span>0</span>
-        </span>
+          <span class="app-brand__text">Codex</span>
+        </div>
 
-        <span class="status-pill status-pill--level">Nível 1</span>
+        <div class="app-header__status">
+          <span class="status-pill">
+            <span class="icon icon--xs">
+              <svg><use href="#icon-trophy"></use></svg>
+            </span>
+            <span>0</span>
+          </span>
+
+          <span class="status-pill status-pill--level">Nível 1</span>
+        </div>
       </div>
     </header>
 
-    <main class="home-container">
-      <section class="streak-card card-entrance">
-        <div class="streak-card__top">
-          <div class="streak-card__left">
-            <span class="streak-card__icon-box">
-              <span class="icon icon--fire">
-                <svg><use href="#icon-fire"></use></svg>
-              </span>
-            </span>
-
-            <div>
-              <h1 class="streak-card__days">0 dias</h1>
-              <p class="streak-card__text">Sequência de leitura ativa!</p>
-            </div>
-          </div>
-
-          <div class="streak-card__right">
-            <span class="streak-card__label">Próximo nível em</span>
-            <strong class="streak-card__points">500 pts</strong>
-          </div>
-        </div>
-
-        <div class="progress-bar progress-bar--light">
-          <div
-            class="progress-bar__fill progress-bar__fill--light js-streak-progress"
-          ></div>
-        </div>
+    <main class="videos-container">
+      <section class="videos-hero">
+        <h1 class="videos-title">Vídeos</h1>
+        <p class="videos-subtitle">
+          Explore histórias em vídeo para aprender e se divertir.
+        </p>
       </section>
 
-      <section class="challenge-card card-entrance">
-        <div class="section-header">
-          <h2 class="section-title section-title--purple">Desafio Diário</h2>
-          <span class="points-badge">+150 pts</span>
-        </div>
-
-        <div class="challenge-card__content">
-          <div class="challenge-card__icon">
-            <span class="icon icon--play">
-              <svg><use href="#icon-play"></use></svg>
-            </span>
-          </div>
-
-          <div class="challenge-card__info">
-            <h3>Complete 3 vídeos hoje</h3>
-
-            <div class="challenge-progress">
-              <div class="progress-bar progress-bar--dark">
-                <div
-                  class="progress-bar__fill progress-bar__fill--dark js-challenge-progress"
-                ></div>
-              </div>
-              <span class="challenge-progress__count">2/3</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <a href="./escola.html" class="school-card card-entrance">
-        <div class="school-card__content">
-          <div class="school-card__copy">
-            <div class="school-card__title-row">
-              <span class="icon icon--sm">
-                <svg><use href="#icon-library"></use></svg>
-              </span>
-              <h2>Biblioteca da Escola</h2>
-            </div>
-
-            <p>
-              Descubra mais de 12 livros físicos disponíveis na biblioteca da
-              sua escola
-            </p>
-            <span class="school-card__link">Reserve e retire hoje mesmo!</span>
-          </div>
-
-          <span class="school-card__arrow">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path
-                d="M5 12h14"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-              <path
-                d="m13 7 5 5-5 5"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+      <section class="search-card">
+        <div class="search-input">
+          <span class="icon icon--search">
+            <svg><use href="#icon-search"></use></svg>
           </span>
+          <input
+            type="text"
+            placeholder="Buscar vídeos..."
+            aria-label="Buscar vídeos"
+          />
         </div>
-      </a>
+      </section>
 
       <section class="categories-section">
         <h2 class="section-title">Categorias</h2>
 
-        <div class="categories-list" role="tablist" aria-label="Categorias">
+        <div class="categories-list">
           <button class="category-pill active" type="button">Todos</button>
           <button class="category-pill" type="button">Contos Clássicos</button>
           <button class="category-pill" type="button">Aventura</button>
@@ -354,17 +259,12 @@
         </div>
       </section>
 
-      <section class="videos-section">
-        <div class="section-header">
-          <h2 class="section-title">Vídeos Recomendados</h2>
-          <a href="./videos.html" class="section-link">Ver todos</a>
-        </div>
-
-        <article class="video-card card-entrance js-video-card" tabindex="0">
+      <section class="videos-grid">
+        <article class="video-card">
           <div class="video-card__thumb">
             <img
               src="../images/a-pequena-sereia.jpg"
-              alt="Thumbnail do vídeo recomendado"
+              alt="Thumbnail do vídeo A Pequena Sereia"
             />
             <span class="video-card__play">
               <svg><use href="#icon-play"></use></svg>
@@ -376,18 +276,69 @@
             <p class="video-card__meta">Hans Christian Andersen • 3:45</p>
           </div>
         </article>
+
+        <article class="video-card">
+          <div class="video-card__thumb">
+            <img
+              src="../images/o-pequeno-principe.jpg"
+              alt="Thumbnail do vídeo O Pequeno Príncipe"
+            />
+            <span class="video-card__play">
+              <svg><use href="#icon-play"></use></svg>
+            </span>
+          </div>
+
+          <div class="video-card__content">
+            <h3 class="video-card__title">O Pequeno Príncipe</h3>
+            <p class="video-card__meta">Antoine de Saint-Exupéry • 4:20</p>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-card__thumb">
+            <img
+              src="../images/gato-de-botas.jpg"
+              alt="Thumbnail do vídeo O Gato de Botas"
+            />
+            <span class="video-card__play">
+              <svg><use href="#icon-play"></use></svg>
+            </span>
+          </div>
+
+          <div class="video-card__content">
+            <h3 class="video-card__title">O Gato de Botas</h3>
+            <p class="video-card__meta">Charles Perrault • 4:10</p>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-card__thumb">
+            <img
+              src="../images/joao-e-o-pe-de-feijao.jpg"
+              alt="Thumbnail do vídeo João e o Pé de Feijão"
+            />
+            <span class="video-card__play">
+              <svg><use href="#icon-play"></use></svg>
+            </span>
+          </div>
+
+          <div class="video-card__content">
+            <h3 class="video-card__title">João e o Pé de Feijão</h3>
+            <p class="video-card__meta">Conto Popular • 3:30</p>
+          </div>
+        </article>
       </section>
     </main>
 
     <nav class="bottom-nav" aria-label="Navegação principal">
-      <a href="./home.html" class="bottom-nav__item active">
+      <a href="./home.html" class="bottom-nav__item">
         <span class="bottom-nav__icon">
           <svg><use href="#icon-home"></use></svg>
         </span>
         <span class="bottom-nav__label">Início</span>
       </a>
 
-      <a href="./videos.html" class="bottom-nav__item">
+      <a href="./videos.html" class="bottom-nav__item active">
         <span class="bottom-nav__icon">
           <svg><use href="#icon-videos"></use></svg>
         </span>
@@ -430,6 +381,6 @@
       </a>
     </nav>
 
-    <script src="../js/home.js"></script>
+    <script src="../js/videos.js"></script>
   </body>
 </html>

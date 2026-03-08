@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CODEX - Desafios</title>
+
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/desafios.css" />
+  </head>
+
+  <body class="challenges-page">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="icon-book" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M4 6.5C4 5.119 5.119 4 6.5 4H20v15.5a.5.5 0 0 1-.5.5H7a3 3 0 0 0-3 3V6.5Z"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M7 20h10"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <path
+          d="M8 4h.5C9.881 4 11 5.119 11 6.5V20"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="icon-trophy" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M8 4h8v3a4 4 0 0 1-8 0V4Z"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M16 5h2a2 2 0 0 1 0 4h-2"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <path
+          d="M8 5H6a2 2 0 1 0 0 4h2"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <path
+          d="M12 11v4"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <path
+          d="M9 20h6"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <path
+          d="M10 15h4"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </symbol>
+
+      <symbol id="icon-home" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5h-5v5H5a1 1 0 0 1-1-1v-8.5Z"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="icon-videos" viewBox="0 0 24 24" fill="none">
+        <rect
+          x="3"
+          y="5"
+          width="12"
+          height="14"
+          rx="2"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <path
+          d="m15 10 6-3v10l-6-3"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="icon-school" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M3 10 12 5l9 5-9 5-9-5Z"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M7 12.5V17a11 11 0 0 0 10 0v-4.5"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="icon-target" viewBox="0 0 24 24" fill="none">
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="4"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+      </symbol>
+
+      <symbol id="icon-ranking" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M5 19h14"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <path
+          d="M7 16V9"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <path
+          d="M12 16V5"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <path
+          d="M17 16v-3"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </symbol>
+
+      <symbol id="icon-badge" viewBox="0 0 24 24" fill="none">
+        <path
+          d="m12 3 2.6 5.2 5.7.8-4.1 4 1 5.7L12 16l-5.2 2.7 1-5.7-4.1-4 5.7-.8L12 3Z"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="icon-user" viewBox="0 0 24 24" fill="none">
+        <circle
+          cx="12"
+          cy="8"
+          r="3.5"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <path
+          d="M5 19a7 7 0 0 1 14 0"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </symbol>
+
+      <symbol id="icon-bolt" viewBox="0 0 24 24" fill="none">
+        <path
+          d="m13 3-7 10h5l-1 8 8-11h-5l0-7Z"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+      </symbol>
+
+      <symbol id="icon-check" viewBox="0 0 24 24" fill="none">
+        <path
+          d="m5 12 4 4L19 6"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+    </svg>
+
+    <div class="challenge-loading" id="challenge-loading">
+      <div class="challenge-loading__icon">
+        <svg><use href="#icon-trophy"></use></svg>
+      </div>
+      <p class="challenge-loading__text">Carregando desafios...</p>
+    </div>
+
+    <div id="challenge-page-content" class="challenge-page-content is-hidden">
+      <header class="app-header">
+        <div class="app-header__inner">
+          <div class="app-brand">
+            <span class="icon icon--brand">
+              <svg><use href="#icon-book"></use></svg>
+            </span>
+            <span class="app-brand__text">Codex</span>
+          </div>
+
+          <div class="app-header__status">
+            <span class="status-pill">
+              <span class="icon icon--xs">
+                <svg><use href="#icon-trophy"></use></svg>
+              </span>
+              <span>0</span>
+            </span>
+
+            <span class="status-pill status-pill--level">Nível 1</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="challenges-container">
+        <section class="challenges-hero challenges-hero--fancy">
+          <div class="challenges-hero__border"></div>
+
+          <div class="challenges-hero__content">
+            <div class="challenges-hero__title">
+              <span class="icon challenges-hero__icon">
+                <svg><use href="#icon-target"></use></svg>
+              </span>
+              <h1 class="challenges-title">Desafios</h1>
+            </div>
+
+            <p class="challenges-subtitle">
+              Complete desafios para ganhar pontos e insígnias exclusivas
+            </p>
+          </div>
+        </section>
+
+        <section class="challenge-stats content-entrance">
+          <article class="challenge-stat challenge-stat--purple">
+            <strong class="challenge-stat__number" id="challenge-total"
+              >0</strong
+            >
+            <span class="challenge-stat__label">Total</span>
+          </article>
+
+          <article class="challenge-stat challenge-stat--blue">
+            <strong class="challenge-stat__number" id="challenge-progress"
+              >0</strong
+            >
+            <span class="challenge-stat__label">Em andamento</span>
+          </article>
+
+          <article class="challenge-stat challenge-stat--green">
+            <strong class="challenge-stat__number" id="challenge-done"
+              >0</strong
+            >
+            <span class="challenge-stat__label">Concluídos</span>
+          </article>
+        </section>
+
+        <section class="challenge-filters content-entrance">
+          <button
+            class="challenge-filter active"
+            type="button"
+            data-filter="todos"
+          >
+            Todos
+          </button>
+          <button class="challenge-filter" type="button" data-filter="facil">
+            Fácil
+          </button>
+          <button class="challenge-filter" type="button" data-filter="medio">
+            Médio
+          </button>
+          <button class="challenge-filter" type="button" data-filter="dificil">
+            Difícil
+          </button>
+        </section>
+
+        <section class="challenge-list content-entrance" id="challenge-list">
+          <article
+            class="challenge-card"
+            data-difficulty="facil"
+            data-status="novo"
+          >
+            <div class="challenge-card__left">
+              <span class="challenge-card__icon">
+                <svg><use href="#icon-bolt"></use></svg>
+              </span>
+
+              <div>
+                <span class="challenge-card__tag challenge-card__tag--facil"
+                  >Fácil</span
+                >
+                <h3 class="challenge-card__title">Leia por 3 dias seguidos</h3>
+                <p class="challenge-card__meta">Ganhe +100 pts ao completar</p>
+              </div>
+            </div>
+
+            <button class="challenge-card__button">Iniciar</button>
+          </article>
+
+          <article
+            class="challenge-card"
+            data-difficulty="medio"
+            data-status="novo"
+          >
+            <div class="challenge-card__left">
+              <span class="challenge-card__icon">
+                <svg><use href="#icon-bolt"></use></svg>
+              </span>
+
+              <div>
+                <span class="challenge-card__tag challenge-card__tag--medio"
+                  >Médio</span
+                >
+                <h3 class="challenge-card__title">
+                  Conclua 2 histórias clássicas
+                </h3>
+                <p class="challenge-card__meta">Ganhe +150 pts ao completar</p>
+              </div>
+            </div>
+
+            <button class="challenge-card__button">Iniciar</button>
+          </article>
+
+          <article
+            class="challenge-card"
+            data-difficulty="dificil"
+            data-status="novo"
+          >
+            <div class="challenge-card__left">
+              <span class="challenge-card__icon">
+                <svg><use href="#icon-bolt"></use></svg>
+              </span>
+
+              <div>
+                <span class="challenge-card__tag challenge-card__tag--dificil"
+                  >Difícil</span
+                >
+                <h3 class="challenge-card__title">
+                  Assista 5 vídeos em uma semana
+                </h3>
+                <p class="challenge-card__meta">Ganhe +250 pts ao completar</p>
+              </div>
+            </div>
+
+            <button class="challenge-card__button">Iniciar</button>
+          </article>
+
+          <article
+            class="challenge-card"
+            data-difficulty="facil"
+            data-status="done"
+          >
+            <div class="challenge-card__left">
+              <span class="challenge-card__icon challenge-card__icon--done">
+                <svg><use href="#icon-check"></use></svg>
+              </span>
+
+              <div>
+                <span class="challenge-card__tag challenge-card__tag--facil"
+                  >Fácil</span
+                >
+                <h3 class="challenge-card__title">
+                  Complete seu primeiro vídeo
+                </h3>
+                <p class="challenge-card__meta">Desafio concluído</p>
+              </div>
+            </div>
+
+            <button class="challenge-card__button challenge-card__button--done">
+              Concluído
+            </button>
+          </article>
+
+          <article
+            class="challenge-card"
+            data-difficulty="medio"
+            data-status="novo"
+          >
+            <div class="challenge-card__left">
+              <span class="challenge-card__icon">
+                <svg><use href="#icon-bolt"></use></svg>
+              </span>
+
+              <div>
+                <span class="challenge-card__tag challenge-card__tag--medio"
+                  >Médio</span
+                >
+                <h3 class="challenge-card__title">
+                  Leia 2 livros da biblioteca
+                </h3>
+                <p class="challenge-card__meta">Ganhe +180 pts ao completar</p>
+              </div>
+            </div>
+
+            <button class="challenge-card__button">Iniciar</button>
+          </article>
+
+          <article
+            class="challenge-card"
+            data-difficulty="dificil"
+            data-status="novo"
+          >
+            <div class="challenge-card__left">
+              <span class="challenge-card__icon">
+                <svg><use href="#icon-bolt"></use></svg>
+              </span>
+
+              <div>
+                <span class="challenge-card__tag challenge-card__tag--dificil"
+                  >Difícil</span
+                >
+                <h3 class="challenge-card__title">
+                  Conclua 3 desafios no mesmo dia
+                </h3>
+                <p class="challenge-card__meta">Ganhe +300 pts ao completar</p>
+              </div>
+            </div>
+
+            <button class="challenge-card__button">Iniciar</button>
+          </article>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Navegação principal">
+        <a href="./home.html" class="bottom-nav__item">
+          <span class="bottom-nav__icon">
+            <svg><use href="#icon-home"></use></svg>
+          </span>
+          <span class="bottom-nav__label">Início</span>
+        </a>
+
+        <a href="./videos.html" class="bottom-nav__item">
+          <span class="bottom-nav__icon">
+            <svg><use href="#icon-videos"></use></svg>
+          </span>
+          <span class="bottom-nav__label">Vídeos</span>
+        </a>
+
+        <a href="./escola.html" class="bottom-nav__item">
+          <span class="bottom-nav__icon">
+            <svg><use href="#icon-school"></use></svg>
+          </span>
+          <span class="bottom-nav__label">Escola</span>
+        </a>
+
+        <a href="./desafios.html" class="bottom-nav__item active">
+          <span class="bottom-nav__icon">
+            <svg><use href="#icon-target"></use></svg>
+          </span>
+          <span class="bottom-nav__label">Desafios</span>
+        </a>
+
+        <a href="./ranking.html" class="bottom-nav__item">
+          <span class="bottom-nav__icon">
+            <svg><use href="#icon-ranking"></use></svg>
+          </span>
+          <span class="bottom-nav__label">Ranking</span>
+        </a>
+
+        <a href="./badges.html" class="bottom-nav__item">
+          <span class="bottom-nav__icon">
+            <svg><use href="#icon-badge"></use></svg>
+          </span>
+          <span class="bottom-nav__label">Badges</span>
+        </a>
+
+        <a href="./perfil.html" class="bottom-nav__item">
+          <span class="bottom-nav__icon">
+            <svg><use href="#icon-user"></use></svg>
+          </span>
+          <span class="bottom-nav__label">Perfil</span>
+        </a>
+      </nav>
+
+      <script src="../js/desafios.js"></script>
+    </div>
+  </body>
+</html>

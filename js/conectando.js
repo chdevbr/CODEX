@@ -20,10 +20,7 @@
   }
 
   function goHome() {
-    // window.location.href = "./home.html";
-
-    // Coloquei para ir para o index enquanto não tem Home
-    window.location.href = "../index.html";
+    window.location.href = "../pages/home.html";
   }
 
   if (!btn || !s2 || !s3 || !s4) return;

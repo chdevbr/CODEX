@@ -4,6 +4,36 @@
     return;
   }
 
+  function showToast(message) {
+    const existingToast = document.querySelector(".codex-toast");
+    if (existingToast) {
+      existingToast.remove();
+    }
+
+    const toast = document.createElement("div");
+    toast.className = "codex-toast";
+
+    toast.innerHTML = `
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="8" x2="12" y2="12"></line>
+        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+      </svg>
+      <span>${message}</span>
+    `;
+
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(() => {
+      toast.classList.add("show");
+    });
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+      setTimeout(() => toast.remove(), 300);
+    }, 3000);
+  }
+
   const steps = Array.from(document.querySelectorAll(".fx-step"));
 
   function showStep(n) {
@@ -40,7 +70,9 @@
   function updateInfo() {
     const hasIdade = !!idade.value;
     const hasEscola = !!escola.value.trim();
-    info.hidden = !(hasIdade && (hasEscola || naoEstudo.checked));
+    if (info) {
+      info.hidden = !(hasIdade && (hasEscola || naoEstudo.checked));
+    }
   }
 
   idade.addEventListener("input", updateInfo);
@@ -56,17 +88,18 @@
     }
     updateInfo();
   });
+
   btn2.addEventListener("click", () => {
     const idadeVal = idade.value.trim();
     const escolaVal = escola.value.trim();
 
     if (!idadeVal) {
-      alert("Informe sua idade.");
+      showToast("Informe sua idade.");
       return;
     }
 
     if (!naoEstudo.checked && !escolaVal) {
-      alert("Informe a escola (ou marque 'Não estudo mais').");
+      showToast("Informe a escola (ou marque 'Não estudo mais').");
       return;
     }
 
@@ -80,10 +113,12 @@
   });
 
   const btnComecar = document.getElementById("fxComecar");
-  btnComecar.addEventListener("click", () => {
-    localStorage.setItem("codex_onboarding_done", "true");
-    window.location.href = "./conectando.html";
-  });
+  if (btnComecar) {
+    btnComecar.addEventListener("click", () => {
+      localStorage.setItem("codex_onboarding_done", "true");
+      window.location.href = "./conectando.html";
+    });
+  }
 
   showStep(1);
 })();
